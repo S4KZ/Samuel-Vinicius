@@ -11,7 +11,7 @@ module.exports = {
         'tertiary': '#F2ECF8',
         'quaternary': '#27254C',
         'quinary': '#040406',
-      }
+      },
     },
   },
   plugins: [

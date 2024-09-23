@@ -11,9 +11,12 @@
 
 <body>
     <!---Navbar--->
-    <div class="fixed top-0 left-0 h-screen w-16 m-0
-    flex flex-col bg-quinary text-tertiary shadow-lg">
-        <div class="sidebar-icon" data-tip="hello">
+
+    <!---Nav para celular-->
+    <div class="fixed top-0 left-0 h-20 w-screen w-16 m-0
+           flex justify-center items-center bg-quinary text-tertiary shadow-lg  md:hidden
+           ">
+        <div class="sidebar-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                 class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
                 <path
@@ -48,9 +51,62 @@
 
                 <!-- sol -->
                 <svg class="swap-off h-7 w-7 fill-current 
-                text-yellow-400" 
-                xmlns="http://www.w3.org/2000/svg"
+                text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                </svg>
+
+                <!-- lua -->
+                <svg class="swap-on h-7 w-7 fill-current text-cyan-200" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24">
+                    <path
+                        d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                </svg>
+            </label>
+        </div>
+    </div>
+
+    <div class="fixed top-0 left-0 h-screen w-16 m-0
+    flex flex-col bg-quinary text-tertiary shadow-lg hidden md:block
+    ">
+
+        <!---navbar padrão-->
+        <div class="sidebar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+                <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755" />
+            </svg>
+        </div>
+
+        <div class="sidebar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-backpack"
+                viewBox="0 0 16 16">
+                <path
+                    d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z" />
+                <path
+                    d="M6 2.341V2a2 2 0 1 1 4 0v.341c2.33.824 4 3.047 4 5.659v5.5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5V8a6 6 0 0 1 4-5.659M7 2v.083a6 6 0 0 1 2 0V2a1 1 0 0 0-2 0m1 1a5 5 0 0 0-5 5v5.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8a5 5 0 0 0-5-5" />
+            </svg>
+        </div>
+
+        <div class="sidebar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                <path
+                    d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+                <path
+                    d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
+            </svg>
+        </div>
+
+        <div class="sidebar-icon">
+            <label class="swap swap-rotate">
+                <!-- não tirar o hidden -->
+                <input type="checkbox" class="theme-controller hidden" value="dark" />
+
+                <!-- sol -->
+                <svg class="swap-off h-7 w-7 fill-current 
+                text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
                         d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
                 </svg>
@@ -67,23 +123,30 @@
 
 
 
+
+
+    <!--Fim da NavBaR-->
+
     <!--SOBRE-->
     <div class="flex flex-col h-screen w-screen p-24
-    items-center 
+    items-center  
     bg-[url('../img/back.png')] bg-repeat-x">
         <h1 class="font-medium text-7xl  
 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500
-       ">
+       text-center">
             SAMUEL VINÍCIUS
         </h1>
-        <h5 class="font-medium text-3xl
-        text-white
+        <h5 class="font-bold text-4xl
+        text-white mt-5 
         " id="typed-strings">
             PR<span id="typed"></span>
         </h5>
+        <!--Relogio-->
+        <p class="mt-10 font-extrabold text-6xl font-mono" id="current-time"></p>
+        <p class="font-light text-4xl" id="current-day"></p>
     </div>
-
-
+  
+    <div class="h-screen"></div>
 
 
 
@@ -98,6 +161,17 @@ bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500
         backSpeed: 60,
         loop: true
     });
+
+    function currentTime() {
+        let agora = new Date();
+        let dia = agora.toLocaleDateString("en", { weekday: 'long' });
+        let hora = agora.toLocaleTimeString("pt-BR");
+        document.getElementById("current-time").innerHTML = `${hora} `;
+        document.getElementById("current-day").innerHTML = `${dia} `;
+    }
+
+    setInterval(currentTime, 1000); // atualizar a cada 1 segundo
+
 
 </script>
 
